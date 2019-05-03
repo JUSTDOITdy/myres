@@ -1,4 +1,5 @@
 ﻿du1152053210.
+测试本地的merge
 1.mybatis:
 找不到类Mapper.xml文件，我感觉是mybatis plugin的问题，
 解决方法：把xml文件和类放在同一个包里，在pom.xml文件里
@@ -96,5 +97,5 @@ java反射:有几个类Field、Constructor、Method，这是类，通过反射�
        	 m.invoke(对象名, “具体的参数”);  
 &：Linux的etc目录，etc etcetera，琐碎，附加的，等等的意思
 
-
+测试git分支，看看主分支上有没有
 linux
