@@ -1,0 +1,96 @@
+﻿du1152053210.
+1.mybatis:
+找不到类Mapper.xml文件，我感觉是mybatis plugin的问题，
+解决方法：把xml文件和类放在同一个包里，在pom.xml文件里
+<build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                     	<include>**/*.properties</include>
+            		<include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+
+2.在cmd中运行java代码，要去掉第一行的package ........
+
+3.MyBatis中当实体类中的属性名和表中的字段名不一致怎么办？最好是相同，或者开启驼峰命名规则
+    1）sql语句中起别名,别名和实体类属性一致：
+	select id , last_name   别名(lastName),...  就是直接在后面写别名，有的用 AS 关键字  
+     2）在MyBatis的全局配置文件中开启  驼峰命名规则，只对这种情况有效 
+	<settings>
+		<setting name="mapUpderscoreToCameCose" value="true"/>
+	</settings>
+     3）自定义高级映射，在对应的Mapping文件中设置，自己百度查吧
+
+
+4.项目出来问题解决步骤
+
+
+5.WAN广域网  LAN局域网 ，
+6.网关的就是一个IP地址，一个局域网必须选出一个IP地址和外边的网络通信联系 ，相当于话事人
+
+
+7.DHCP  (Dynamic Host Configuration Protocol) 动态主机设置协议
+8.CAP原则又称CAP定理，指的是在一个分布式系统中，Consistency（一致性）、 Availability（可用性）、Partition tolerance（分区容错性），三者不可兼得 [1]  。CAP理论就是说在分布式存储系统中，最多只能实现上面的两点。而由于当前的网络硬件肯定会出现延迟丢包等问题，所以分区容错性是我们必须需要实现的。所以我们只能在一致性和可用性之间进行权衡，没有NoSQL系统能同时保证这三点。传统的关系型数据库在功能支持上通常很宽泛，从简单的键值查询，到复杂的多表联合查询再到事务机制的支持。而与之不同的是，NoSQL系统通常注重性能和扩展性，而非事务机制（事务就是强一致性的体现）
+
+
+9.从		<form action="LoginServlet">
+			<input type="text"  name="dddd">
+		    	<input type="text"  name="yyyy">
+		    <input type="submit"  value="登录">
+		</form>
+
+开始，就相当于把数据setParameter了，后面的servlet还是请求转发的xxx.jsp,直接用request.getParameter("dddd"),就可以得到，eg: xxx.jsp	
+<b><%=request.getParameter("dddd") %></b><br/>
+<b><%=request.getParameter("yyyy")%></b>
+
+10.@RequestMapping 属性
+ 	consumes属性 ：指定处理请求的提交内容类型（Content-Type），	例如application/json, text/html;
+
+　	　produces属性：指定返回的内容类型，仅当request请求头中的(Accept)类型中包含该指定类型才返回，本人实验了一下，如果请求的头中不包含这个属性也能有正确的返回值，但是如果有Accept这个属性，那么前后要匹配，否则输出报错；
+
+11.
+	//@Autowired
+	//@Qualifier("studentMapper") 
+	private StudentMapper studentMapper;
+	
+	//2种方式，有上面的注入方式，这个就可以不用了
+	//Autowired是根据形参的类型来选择bean的，与方法名字无关
+	@Autowired
+	public void bbb(StudentMapper studentMapper) {
+		System.out.println("service 调用 setStudentMapper");
+		this.studentMapper = studentMapper;
+	}
+
+
+12.
+什么时候JVM会使用ClassLoader加载一个类呢？当你使用java去执行一个类，JVM使用ApplicationClassLoader加载这个类；然后如果类A引用了类B，不管是直接引用还是用Class.forName()引用，JVM就会找到加载类A的ClassLoader，并用这个ClassLoader来加载类B。JVM按照运行时的有效执行语句，来决定是否需要装载新类，从而装载尽可能少的类，这一点和编译类是不相同的。
+
+ClassLoader.getSystemClassLoader(); // 使 用系统ClassLoader，即系统的入口点所使用的ClassLoader。（注意，system ClassLoader与根 ClassLoader并不一样。JVM下system ClassLoader通常为App ClassLoader）
+一个ClassLoader创建时如果没有指定parent，那么它的parent默认就是AppClassLoader。 
+
+
+定义自已的类加载器分为两步：
+1、继承java.lang.ClassLoader
+2、重写父类的findClass方法
+ 
+读者可能在这里有疑问，父类有那么多方法，为什么偏偏只重写findClass方法？
+因为JDK已经在loadClass方法中帮我们实现了ClassLoader搜索类的算法，当在loadClass方法中搜索不到类时，loadClass方法就会调用findClass方法来搜索类，所以我们只需重写该方法即可。如没有特殊的要求，一般不建议重写loadClass搜索类的算法。
+自定义步骤
+编写一个类继承自ClassLoader抽象类。
+复写它的findClass()方法。
+在findClass()方法中调用defineClass()。
+defineClass()
+这个方法在编写自定义classloader的时候非常重要，它能将class二进制内容转换成Class对象，如果不符合要求的会抛出各种异常。
+
+
+java反射:有几个类Field、Constructor、Method，这是类，通过反射得到的类，
+      	//通过方法名得到方法
+ 	  Method m = stuClass.getMethod(”show1”, String.class);
+	//在用方法名去调具体的对象和参数
+       	 m.invoke(对象名, “具体的参数”);  
+&：Linux的etc目录，etc etcetera，琐碎，附加的，等等的意思
