@@ -1,7 +1,9 @@
-﻿du1152053210.
+﻿du1152053210. branch3
 测试本地的merge
 我在这里写，所有的分支都有影响吗？
 在一个分支里写，不提交不能换其他分支
+在branch1上创建branch3和branch4，3、4同时进行，最后怎么合并到1上呢？
+ 
 1.mybatis:
 找不到类Mapper.xml文件，我感觉是mybatis plugin的问题，
 解决方法：把xml文件和类放在同一个包里，在pom.xml文件里
