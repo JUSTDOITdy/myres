@@ -1,7 +1,9 @@
-﻿du1152053210.
+﻿du1152053210. branch3
 测试本地的merge
 我在这里写，所有的分支都有影响吗？
 在一个分支里写，不提交不能换其他分支
+在branch1上创建branch3和branch4，3、4同时进行，最后怎么合并到1上呢？
+ 
 1.mybatis:
 找不到类Mapper.xml文件，我感觉是mybatis plugin的问题，
 解决方法：把xml文件和类放在同一个包里，在pom.xml文件里
@@ -81,7 +83,7 @@ ClassLoader.getSystemClassLoader(); // 使 用系统ClassLoader，即系统的�
 定义自已的类加载器分为两步：
 1、继承java.lang.ClassLoader
 2、重写父类的findClass方法
- 
+
 读者可能在这里有疑问，父类有那么多方法，为什么偏偏只重写findClass方法？
 因为JDK已经在loadClass方法中帮我们实现了ClassLoader搜索类的算法，当在loadClass方法中搜索不到类时，loadClass方法就会调用findClass方法来搜索类，所以我们只需重写该方法即可。如没有特殊的要求，一般不建议重写loadClass搜索类的算法。
 自定义步骤
