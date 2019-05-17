@@ -1,5 +1,8 @@
 ﻿编程语言书不用太细看，看个大概，知道里面讲些什么就好，不用全记得，然后你一个劲地自己敲代码，编代码，使劲地编，编的时候不懂再回来看就好了，这是最快的方法！
 
+maven是管理各种库和jar包依赖的，jar包的依赖和项目的结构关系
+git是管理各个版本依赖的，一个空间，一个时间
+
 #git要保持一致，原版有时候错了会很麻烦
 ﻿du1152053210.
 #git 关联的远程仓库和本地仓库像两个仓库，可以各自进行创建创作修改删除文件，两个是平级关系，但可以通过pull（下拉）push（上传）来进行交流和保持同步（相同）
@@ -21,6 +24,16 @@ branch3 branch4
 
 
 1.mybatis:
+IDEA的mapper.xml文件找不到，需要在pom.xml里<bulid>里
+          <resources>
+                <resource>
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </resource>
+            </resources>
+
 找不到类Mapper.xml文件，我感觉是mybatis plugin的问题，
 解决方法：把xml文件和类放在同一个包里，在pom.xml文件里
 <build>
@@ -123,7 +136,14 @@ java 的stub 是什么？
 为屏蔽客户调用远程主机上的对象，必须提供某种方式来模拟本地对象,这种本地对象称为存根(stub),存根负责接收本地方法调用,并将它们委派给各自的具体实现对象 
 序列化 (Serialization)是将对象的状态信息转换为可以存储或 传输 的形式的过程。
 二进制序列化和xml序列化
-### Java一切皆对象，对象就是用来用的，把某样东西弄成对象，
+###   Java一切皆对象，对象就是用来用的，把某样东西弄成对象，
 	eg:  File file = new File("E:\\xxx.txt");   //原始材料E:\\xxx.txt
 	       InputStream ins = new FileInputStream(file);
 Java只能操作对象，想操作什么东西，先把它弄成Java的对象，当然，需要一些原始材料。
+
+
+ 【【      Java的char是占两个字节(byte)的，是用的Unicode编码，Unicode在ASC码上发展来的，ASC码只用一个byte就行，所以只能表示255（2的8方）个字符。汉字需要两个byte.
+       char可以强转成byte,但是只用第一个字节，第二个字节会丢掉，eg     char c = 'a';    sysout((byte)c);  会输出a的ASC码，a字符只用第一个字节就行,
+而  	 char c = '好';    sysout((byte)c);    会显示一个小于255的数。
+
+【【   System类的方法也挺重要的

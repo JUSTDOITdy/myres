@@ -1,8 +1,10 @@
 https://blog.csdn.net/jingzi123456789/article/details/72123937
 
+``![img](https://img-blog.csdn.net/20171015172524055?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ19TYW5kYW4=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+
 1. # 流的分类
 
-    
+     
 
     ### 按数据流的方向不同：输入流，输出流。
 
@@ -119,8 +121,9 @@ https://blog.csdn.net/jingzi123456789/article/details/72123937
     - （6）Counting计数流： 在读入数据时对行记数 ：LineNumberReader、LineNumberInputStream。 
     - （7）Peeking Ahead预读流： 通过缓存机制，进行预读 ：PushbackReader、PushbackInputStream。 
     - （8）Printing打印流： 包含方便的打印方法 ：PrintWriter、PrintStream。
+
     ---------------------
-    
+
 
 #### 这里说一下字节数组流（ByteArrayI/OStream）
 
