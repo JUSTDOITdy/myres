@@ -40,11 +40,9 @@ netstat -tunlp |grep 端口号，用于查看指定的端口号的进程情况�
 
 进程
 
- ps -ef
+ ps -ef    ps -aux
 
- ps -aux
-
- kill -s 9 1827
+ kill -s 9 1827 -
 
 其中-s 9 制定了传递给进程的信号是９，即强制、尽快终止进程。各个终止信号及其作用见附录。
 
@@ -110,3 +108,15 @@ apt-get可以用于运作deb包，例如在[Ubuntu系统](https://www.baidu.com/
 
 
 
+#### 软件安装 ./configure 、make、make install
+
+./configure是源代码安装的第一步，主要的作用是对即将安装的软件进行配置，检查当前的环境是否满足要安装软件的依赖关系，但并不是所有的tar包都是源代码的包，楼主可以ls看看有没有configure这个文件，也许你下的是二进制的包，如果是二进制的包，解压后直接就能使用
+
+你先ls，看有没有configure或者makefile文件。
+如果有configure，就./configure，有很多参数。如果系统环境合适，就会生成makefile，否则会报错。
+如果有makefile，就直接make，然后make install。
+**你还可以用rpm或者deb包来安装。而且现在的发行版都有自己的包管理器，比如apt或yum，一个命令就可以从源下载软件，还可以自动解决依赖问题。**
+
+yum --help 
+
+yum search java | grep jdk

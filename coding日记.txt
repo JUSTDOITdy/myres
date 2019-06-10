@@ -147,3 +147,5 @@ Java只能操作对象，想操作什么东西，先把它弄成Java的对象，
 而  	 char c = '好';    sysout((byte)c);    会显示一个小于255的数。
 
 【【   System类的方法也挺重要的
+
+【】web.xml   和  springmvc.xml   的区别
