@@ -150,6 +150,7 @@ Java只能操作对象，想操作什么东西，先把它弄成Java的对象，
 【【   System类的方法也挺重要的
 
 【】web.xml   和  springmvc.xml   的区别
+<<<<<<< HEAD
 
 【】js 和Jquery函数和变量不能互通，两者是独立的，前者 是 DOM对象，后者是JQuery对象，JQuery对象、属性、变量、函数经常和$美元doller符合在一起，一眼就能区分
 【】Jquery对象默认是 一个 数组 或 集合 ，DOM对象默认就是 一个元素  #id ， .class
