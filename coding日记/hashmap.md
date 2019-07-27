@@ -1,6 +1,10 @@
-![img](https://images2015.cnblogs.com/blog/1024555/201611/1024555-20161115133556388-1098209938.png)
 
-hashmap避免重复用的是hash值即h，不是hashcode值,hashcode值默认是jvm地址
+
+
+
+![1560328053118](C:\Users\DYY\AppData\Roaming\Typora\typora-user-images\1560328053118.png)
+
+避免重复用的是hash值即h，不是hashcode值,hashcode值默认是jvm地址
 
 ```java
 static class Entry<K,V> implements Map.Entry<K,V> {
