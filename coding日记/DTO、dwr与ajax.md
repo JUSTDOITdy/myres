@@ -21,9 +21,11 @@ Data Transfer Object数据传输对象
 比如我们一张表有100个字段，那么对应的PO就有100个属性。
 但是我们界面上只要显示10个字段，
 客户端用WEB service来获取数据，没有必要把整个PO对象传递到客户端，
-这时我们就可以用只有这10个属性的DTO来传递结果到客户端，这样也不会暴露服务端表结构.到达客户端以后，如果用这个对象来对应界面显示，那此时它的身份就转为VO。
+这时我们就可以用只有这10个属性的DTO来传递结果到客户端，这样也不会暴露服务端表结构.到达客户端以后，如果用这个对象来对应界面显示，那
 
-POJO（POJO是一种概念或者接口，身份及作用随环境变化而变化） ：
+此时它的身份就转为VO。
+
+POJO（POJO是一种概念或者接口，身份及作用随环境变化而变化）：
 POJO有一些private的参数作为对象的属性。然后针对每个参数定义了get和set方法作为访问的接口
 plain ordinary java object 简单java对象
 即POJO是一个简单的普通的Java对象，它不包含业务逻辑或持久逻辑等，但不是JavaBean、EntityBean等，不具有任何特殊角色和不继承或不实现任何其它[Java框架](https://www.baidu.com/s?wd=Java%E6%A1%86%E6%9E%B6&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao)的类或接口。
